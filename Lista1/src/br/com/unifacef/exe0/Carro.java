@@ -1,4 +1,7 @@
 package br.com.unifacef.exe0;
+
+import javax.swing.JOptionPane;
+
 public class Carro {
     // declaração das vriáveis
     String modelo;
@@ -6,6 +9,16 @@ public class Carro {
     float velocidade;
     boolean motor; // true (ligado) ou false (desligado)
     
+    // método construtor
+    Carro(){
+        
+    }
+    Carro(String md, int an, float ve, boolean mt){
+        modelo = md;
+        ano = an;
+        velocidade = ve;
+        motor = mt;
+    }
     // métodos
     void ligar(){
         motor = true;
@@ -21,7 +34,7 @@ public class Carro {
         velocidade -=x;
     }
     void mostrar(){
-        System.out.println("Modelo: " + modelo + 
+        JOptionPane.showMessageDialog(null, "Modelo: " + modelo + 
         " Ano: " + ano + " Vel " + velocidade +
         " Motor: " + motor);
     }
