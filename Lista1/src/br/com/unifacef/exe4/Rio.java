@@ -3,9 +3,9 @@ package br.com.unifacef.exe4;
 import javax.swing.JOptionPane;
 
 public class Rio {
-    private String nome;
-    private float nivel;
-    private boolean poluido; // false não está poluido, true está poluido
+     String nome;
+     float nivel;
+     boolean poluido; // false não está poluido, true está poluido
     
     Rio(){
         
