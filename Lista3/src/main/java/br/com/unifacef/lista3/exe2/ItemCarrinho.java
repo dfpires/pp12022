@@ -57,7 +57,7 @@ public class ItemCarrinho {
 
     @Override
     public String toString() {
-        return "ItemCarrinho{" + "descricao=" + descricao + ", qtde=" + qtde + 
+        return "\n ItemCarrinho{" + "descricao=" + descricao + ", qtde=" + qtde + 
                 ", codigo=" + codigo + ", valor=" + valor + '}';
     }
     

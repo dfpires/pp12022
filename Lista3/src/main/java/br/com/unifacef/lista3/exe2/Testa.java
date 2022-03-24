@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package br.com.unifacef.lista3.exe2;
-
-/**
- *
- * @author professor
- */
+import java.util.Date;
 public class Testa {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Carrinho car1 = new Carrinho(1, new Date());
+        car1.setCep("14.401-295");
+        ItemCarrinho ic1 = new ItemCarrinho("SSD 240", 1, 100, 200);
+        ItemCarrinho ic2 = new ItemCarrinho("Monitor 21", 2, 101, 800);
+        car1.addItemCarrinho(ic1);
+        car1.addItemCarrinho(ic2);
+        
+        System.out.println(car1.toString());
+        car1.removeItemCarrinho(ic1);
+        System.out.println(car1.toString());
     }
     
 }
