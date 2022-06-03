@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  </head>
-  <body>
+    <script src="script.js"> </script>
+</head>
+  <body onLoad="consulta()"> <!-- quando a página for carregada -->
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -46,24 +47,35 @@
                         <input type="text" class="form-control" id="nome"/>
                     </div>
                     <div class="mb-3">
-                            <label for="nome" class="form-label"> Tipo </label>
-                            <input type="text" class="form-control" id="nome"/>
+                            <label for="tipo" class="form-label"> Tipo </label>
+                            <input type="text" class="form-control" id="tipo"/>
                     </div>
                     <div class="mb-3">
-                            <label for="nome" class="form-label"> Poder </label>
-                            <input type="text" class="form-control" id="nome"/>
+                            <label for="poder" class="form-label"> Poder </label>
+                            <input type="text" class="form-control" id="poder"/>
                     </div>
                     <div class="mb-3">
-                            <label for="nome" class="form-label"> Nota </label>
-                            <input type="text" class="form-control" id="nome"/>
+                            <label for="nota" class="form-label"> Nota </label>
+                            <input type="number" class="form-control" id="nota"/>
                     </div>
-                    <button type="button" class="btn btn-primary"> Confirmar </button>
+                    <button onClick="cadastrar()" type="button" class="btn btn-primary"> Confirmar </button>
                 </form>
             </div>
         </section>
         <section id="consulta">
             <div class="container">
                 <h3> Consulta / Remoção de Pokemon </h3>
+                <table class="table">
+                    <thead>
+                        <tr> 
+                            <th> Nome </th> <th> Tipo </th> 
+                            <th> Poder </th> <th> Nota </th> 
+                        </tr>    
+                    </thead>
+                    <tbody id="corpoTabela">
+                        <!-- os dados do pokemon virão aqui -->
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
